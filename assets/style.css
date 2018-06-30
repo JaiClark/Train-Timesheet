@@ -1,0 +1,29 @@
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #5FA4E9;
+    border-color: #333;
+    padding: 1px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.panel-body {
+    padding: 15px;
+    border-style: solid;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.jumbotron {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
