@@ -1,3 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .panel-default>.panel-heading {
     color: #333;
     background-color: #5FA4E9;
@@ -26,4 +42,8 @@
     margin-bottom: 30px;
     color: inherit;
     background-color: #eee;
+}
+
+#mytextbox2 {
+    margin: 10px;
 }

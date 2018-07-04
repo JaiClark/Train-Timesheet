@@ -6,17 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flying Car Timesheet</title>
 
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- FireBase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+<!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 
     <link rel = "stylesheet" href="assets/style.css">
 </head>
 
 
-<body>
+<body background = "assets/images/space.gif" class = "bg">
 
     <div class = "container">
 
@@ -26,43 +32,64 @@
     </div>
 
     <div class ="container">
-
+      
     <div class="row">
 
     <!-- Add Employee Panel-->
-    <div class="col-lg-12">
+    <div class="col-lg-6">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h6 class="panel-title">Add Flying Car</h6>
         </div>
-        <div class="panel-body">
+        <div class="panel-body col-lg-12">
 
           <!-- Add Employee Info-->
           <form role="form">
             <div class="form-group">
-              <label for="name-input">Car Name</label>
-              <input class="form-control" id="name-input" type="text">
+              <label for="carName-input">Car Name</label>
+              <input class="form-control" id="carName-input" type="text">
             </div>
             <div class="form-group">
-              <label for="email-input">Destination</label>
-              <input class="form-control" id="role" type="role">
+              <label for="destination-input">Destination</label>
+              <input class="form-control" id="destination-input" type="role">
             </div>
             <div class="form-group">
-              <label for="age-input">First Car Time (HH:mm - Military Time)</label>
-              <input class="form-control" id="age-input" type="number">
+              <label for="#arrival-input">First Car Time (HH:mm - Military Time)</label>
+              <input class="form-control" id="#arrival-input" type="number">
             </div>
             <div class="form-group">
-              <label for="age-input">Frequency (min)</label>
-              <input class="form-control" id="age-input" type="number">
+              <label for="frequency-input">Frequency (min)</label>
+              <input class="form-control" id="frequency-input" type="number">
             </div>
-            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+            <button class="btn btn-default" id="add-car-button" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title">Current Train Schedule</h6>
+        </div>
+        <div class="panel-body">
 
+          <!-- Add Employee Info-->
+          <table class="table table-striped" id = "car-table">
+              <tbody>
+                <tr>
+                  <th scope= "col">Car Name</th>
+                  <th scope= "col">Destination</th>
+                  <th scope= "col">Frequency (min)</th>
+                  <th scope= "col">Next Arrival</th>
+                  <th scope= "col">Minutes Away</th>
+                </tr>
+              </tbody>
+            </table>
 </div>
-    
+
+ <!-- Link to the css -->
+ <script src="assets/javascript/app.js"></script> 
+
 </body>
 </html>
