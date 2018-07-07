@@ -22,7 +22,7 @@
       var carName = $("#carName-input").val().trim();
       var carDestination = $("#destination-input").val().trim();
       var carFreq = $("#frequency-input").val().trim();
-    //   var carArrival = moment($("#arrival-input").val().trim(), "MM/DD/YYYY").format("X");
+    
     //   var carAway = $("#away").val().trim();
 
       //Object for holding the train data
@@ -79,5 +79,32 @@ database.ref().on("child_added", function(childSnapshot){
 
 
     $('#car-table > tbody').append(newRow);
+
+
+    //Calculating the times of the Flying Cars
+
+    
+    var cFrequency = 5;
+
+    //Time is 12:00 AM
+    var firstTime = "12:00";
+
+    
+    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
+
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    // Time apart (remainder)
+    var cRemainder = diffTime % cFrequency;
+    console.log(cRemainder);
+
+     // Minute Until Train
+     var carAway = cFrequency - cRemainder;
+     console.log("MINUTES TILL TRAIN: " + carAway);
     
 });
